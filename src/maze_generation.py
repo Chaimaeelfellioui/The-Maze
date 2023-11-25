@@ -1,4 +1,4 @@
-# src/maze_generation.py
+# maze_generation.py
 
 import random
 
@@ -40,12 +40,3 @@ def recursive_backtracking(maze, row, column):
             maze[row + dr // 2][column + dc // 2] = 0
             maze[new_row][new_column] = 0
             recursive_backtracking(maze, new_row, new_column)
-
-# Example of usage
-if __name__ == "__main__":
-    maze_width = 11
-    maze_height = 11
-    generated_maze = generate_maze(maze_width, maze_height)
-
-    for row in generated_maze:
-        print(" ".join("X" if cell == 1 else " " for cell in row))
