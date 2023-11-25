@@ -24,10 +24,7 @@ class Game:
             # Display the maze with the current player's position
             self.display_game_state()
 
-            # Add conditions to end the game, for example, if the player reaches a goal
-
-    def display_game_state(self):
-        # Display logic for the maze with the player's position
-        for row in self.maze:
-            print(" ".join("X" if cell == 1 else " " for cell in row))
-        print("Player position: ({}, {})".format(self.player.row, self.player.col))
+            # Add a win condition here
+            if self.player_has_won():
+                print("Congratulations! You won!")
+                break
