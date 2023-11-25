@@ -28,3 +28,14 @@ class Game:
             if self.player_has_won():
                 print("Congratulations! You won!")
                 break
+
+    def display_game_state(self):
+        # Display logic for the maze with the player's position
+        for row in self.maze:
+            print(" ".join("X" if cell == 1 else " " for cell in row))
+        print("Player position: ({}, {})".format(self.player.row, self.player.col))
+
+    def player_has_won(self):
+        # Implement win condition logic here
+        # For example, check if the player has reached a goal
+        return False  # Replace this with your win condition logic
